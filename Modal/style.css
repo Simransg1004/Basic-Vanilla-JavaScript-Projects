@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", "sans-serif";
+}
+body {
+    width: 100vw;
+    height: 100vh;
+}
+.main {
+    background: url('Images/hero.jpeg') no-repeat center center/cover;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.open-modal.main::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+    opacity: 0.99;
+}
+
+.dialogbox {
+    display: inline-block;
+    background-color: white;
+    width: 50%;
+    text-align: center;
+    border: 2px solid gray;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    
+}
+.dialogbox h2 {
+    /* background-color: rgb(180, 84, 84); */
+    font-weight: bold;
+    padding: 20px;
+    margin: 25px;
+    font-size: 50px;
+    letter-spacing: 6px;
+}
+.dialogbox .modal-btn {
+    margin: 12px;
+    padding: 6px 30px;
+    background-color: #49a6e9;
+    border: 2px solid #49a6e9!important;
+    border-radius: 10px;
+    border: none;
+    font-size: 20px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    cursor: pointer;
+}
+.dialogbox .modal-btn:hover {
+    transition: all 0.25s linear;
+    background-color: white;
+    color: #49a6e9;
+}
+.modal {
+    /* visibility: hidden; */
+    background-color: white;
+    width: 50%;
+    height: 20%;
+    display: flex;
+    border: 2px solid gray;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(120, 132, 241, 0.2);
+    z-index: -10;
+    position: absolute;
+    /* justify-content: center;
+    align-items: center; */
+}
+.modal h3 {
+    margin: 12px;
+    padding: 12px 3px;
+    /* width: 90%; */
+    /* background-color: blue; */
+    font-size: 30px;
+    text-align: center;
+    margin: auto;
+}
+.close {
+    padding: 3px;
+    width: 30px;
+    height: 30px;
+    float: right;
+    margin: 15px;
+    cursor: pointer;
+    border: none;
+    color: red;
+}
+
+
+@media screen and (max-width: 600px) {
+    .dialogbox {
+        width: 95%;
+    }
+    .dialogbox h2 {
+        font-size: 40px;
+    }
+    .modal {
+        width: 95%;
+    }
+    .modal h3 {
+        font-size: 20px;
+    }
+}
+
+
+.close:hover {
+    transform: scale(1.2);
+}
+
+.open-modal {
+    visibility: visible;
+    z-index: 10;
+}

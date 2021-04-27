@@ -1,0 +1,144 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.toggle-btn {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 40px;
+    top: 40px;
+    padding: 2px;
+    animation: bounce 2s ease-in-out infinite;
+}
+@keyframes bounce {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+}
+
+.toggle-btn img {
+    width: 100%;
+    height: 100%;
+}
+
+.sidebar { 
+    transition: all 0.5s ease-in-out;
+    transform: translateX(-100%);
+    background-color: rgb(201, 195, 195);
+    width: 25%;
+    height: 100vh;
+}
+.heading {
+    display: flex;
+    justify-content: space-between;
+    /* padding: 15px; */
+    padding: 1rem 1rem 1rem 1rem;
+    background-color: rgb(182, 169, 169);
+}
+h2 {
+    font-size: 30px;
+}
+.close-btn {
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: none;
+    color: rgb(175, 11, 11);
+    transition: all 0.2s linear;
+    cursor: pointer;
+}
+.close-btn:hover {
+    transform: rotate(180deg);
+}
+
+.links {
+    list-style-type: none;
+    text-transform: capitalize;
+    padding: 20px 10px;
+    line-height: 50px;
+    cursor: pointer;
+    width: 100%;
+}
+.links li{
+    font-size: 32px;
+    padding: 10px;
+    width: 100%;
+}
+.links li:hover {
+    transition: all 0.2s linear;
+    transform: translateX(7px);
+    background-color: rgb(192, 138, 138);
+}
+.links a {
+    text-decoration: none;
+    color: black;
+}
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.social-icons {
+    display: flex;
+    list-style-type: none;  
+    justify-content: center;
+}
+.social-icons li {
+    margin: 10px;
+}
+.social-icons li a {
+    text-decoration: none;
+    color: rgb(87, 87, 214);
+}
+.social-icons li a:hover {
+    color: blue;
+}
+
+
+/* Sidebar toggle class */
+.sidebar-toggle {
+    transition: all 0.5s ease-in-out;
+    transform: translateX(0%);
+}
+
+@media screen and (max-width: 992px) {
+    .sidebar {
+        width: 50%;
+    }
+    .links li{
+        font-size: 25px;
+        padding: 5px;
+    }
+    .toggle-btn {
+        width: 30px;
+        height: 30px;
+        right: 30px;
+        top: 30px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .sidebar {
+        width: 100%;
+    }
+    .links li{
+        font-size: 20px;
+        padding: 2px;
+    }
+    .toggle-btn {
+        width: 20px;
+        height: 20px;
+        right: 20px;
+        top: 20px;
+    }
+}

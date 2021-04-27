@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'helvetica neue';
+}
+
+body {
+    width: 100%;
+    background-color: rgb(219, 186, 145);
+    margin: 4rem 0rem;
+}
+.container {
+    margin: 2rem auto;
+    width: 70%;
+    text-align: center;
+    background-color: white;
+    padding: 4rem;
+}
+.container h1 {
+    margin: 2rem;
+}
+.container p {
+    font-size: 20px;
+    line-height: 2rem;
+    text-align: justify;
+}
+
+img {
+    width: 14rem;
+    height: 14rem;
+    margin: 1rem;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.slide-in {
+    opacity: 0;
+    transition: all 0.5s;
+}
+.float-left.slide-in {
+    transform: translateX(-50%) scale(0.95);
+}
+.float-right.slide-in {
+    transform: translateX(50%) scale(0.95);
+}
+
+.slide-in.active {
+    opacity: 1;
+    transition: all 0.5s;
+    transform: translate(0) scale(1);
+}
